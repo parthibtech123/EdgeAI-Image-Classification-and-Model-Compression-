@@ -1,0 +1,10 @@
+tensorflow>=2.19.0
+tf-keras
+tensorflow-datasets
+tensorflow-model-optimization
+keras-flops
+scikit-learn
+pandas
+numpy
+matplotlib
+seaborn
