@@ -4,16 +4,12 @@
 
 ### Deep Learning • TensorFlow • TensorFlow Lite • Model Compression • Edge Deployment
 
-<p align="center">
-
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.19-FF6F00?style=for-the-badge&logo=tensorflow)
 ![TensorFlow Lite](https://img.shields.io/badge/TensorFlow-Lite-orange?style=for-the-badge)
 ![Keras](https://img.shields.io/badge/Keras-Deep_Learning-D00000?style=for-the-badge&logo=keras)
 ![Edge AI](https://img.shields.io/badge/Edge-AI-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-</p>
 
 *A comprehensive study of Edge AI optimization techniques using MobileNetV2 and VGG16 for efficient deployment on resource-constrained devices.*
 
@@ -23,41 +19,41 @@
 
 # 📖 Overview
 
-Edge AI enables machine learning models to execute directly on embedded and edge devices with limited computational resources. This project investigates the impact of several optimization techniques on deep learning image classification models while maintaining competitive accuracy.
+This project explores **Edge AI optimization techniques** for deep learning image classification using **TensorFlow**, **TensorFlow Lite**, and the **TensorFlow Model Optimization Toolkit**.
 
-Using the **Rock–Paper–Scissors** dataset, two transfer learning architectures—**MobileNetV2** and **VGG16**—were trained and optimized using **TensorFlow Lite** and **TensorFlow Model Optimization Toolkit**. The optimized models were benchmarked based on classification accuracy, model size, and inference latency to evaluate their suitability for deployment on edge platforms.
+Two popular transfer learning architectures, **MobileNetV2** and **VGG16**, were trained on the **Rock-Paper-Scissors** dataset and optimized using multiple deployment-oriented techniques including TensorFlow Lite conversion, INT8 quantization, Float16 quantization, and weight clustering.
 
----
-
-# ✨ Key Features
-
-- ✅ TensorFlow Dataset API
-- ✅ Transfer Learning with ImageNet Weights
-- ✅ MobileNetV2
-- ✅ VGG16
-- ✅ Data Augmentation
-- ✅ TensorFlow Lite Conversion
-- ✅ Float16 Quantization
-- ✅ INT8 Quantization
-- ✅ Weight Clustering
-- ✅ Model Compression
-- ✅ Performance Benchmarking
-- ✅ Edge AI Deployment Analysis
+The optimized models were evaluated based on **classification accuracy**, **model size**, and **inference latency** to identify the most suitable architecture for deployment on edge devices such as Raspberry Pi, NVIDIA Jetson, and mobile platforms.
 
 ---
 
-# 🖼 Dataset
+# ✨ Features
 
-## Rock–Paper–Scissors Dataset (TensorFlow Datasets)
+- Transfer Learning using ImageNet pretrained models
+- MobileNetV2 and VGG16 implementation
+- Data preprocessing and augmentation
+- TensorFlow Lite model conversion
+- Float16 quantization
+- INT8 quantization
+- Weight clustering
+- Model compression
+- Performance benchmarking
+- Edge AI deployment analysis
+
+---
+
+# 📂 Dataset
+
+**Dataset:** Rock-Paper-Scissors (TensorFlow Datasets)
 
 | Property | Value |
 |-----------|------:|
 | Training Images | 2520 |
 | Testing Images | 372 |
-| Classes | 3 |
-| Input Resolution | 128 × 128 |
+| Number of Classes | 3 |
+| Input Image Size | 128 × 128 |
 
-### Classes
+**Classes**
 
 - ✊ Rock
 - ✋ Paper
@@ -65,16 +61,16 @@ Using the **Rock–Paper–Scissors** dataset, two transfer learning architectur
 
 ---
 
-# 🔄 Project Workflow
+# ⚙️ Workflow
 
 ```text
 Dataset
    │
    ▼
-Data Exploration
+Preprocessing
    │
    ▼
-Preprocessing & Augmentation
+Data Augmentation
    │
    ▼
 Transfer Learning
@@ -83,66 +79,61 @@ Transfer Learning
 Model Training
    │
    ▼
-Performance Evaluation
+Model Evaluation
    │
    ▼
 TensorFlow Lite Conversion
    │
    ▼
-Model Quantization
+Quantization
    │
    ▼
 Weight Clustering
    │
    ▼
-Performance Benchmarking
+Performance Comparison
 ```
 
 ---
 
-# 🧠 Deep Learning Models
+# 🧠 Models Used
 
 ## MobileNetV2
 
-- Lightweight CNN
-- Transfer Learning
-- ImageNet Pretrained
-- Fine-tuning
-- Global Average Pooling
-- Softmax Classification Layer
+- Lightweight convolutional neural network
+- ImageNet pretrained weights
+- Fine-tuned using transfer learning
+- Optimized for low-latency inference
 
 ### Advantages
 
-- Low computational complexity
-- Small memory footprint
+- Small model size
 - Fast inference
-- Ideal for embedded devices
+- Low computational cost
+- Suitable for embedded devices
 
 ---
 
 ## VGG16
 
-- Deep CNN Architecture
-- Transfer Learning
-- ImageNet Pretrained
-- Fine-tuning
-- Dense Classification Head
+- Deep convolutional neural network
+- ImageNet pretrained weights
+- Fine-tuned for image classification
+- High feature extraction capability
 
 ### Advantages
 
-- Excellent feature extraction
 - High classification accuracy
+- Robust feature learning
 - Strong benchmark architecture
 
 ---
 
-# ⚙️ Edge AI Optimization Techniques
+# ⚡ Edge AI Optimization Techniques
 
 ### TensorFlow Lite Conversion
 
-Converts trained TensorFlow models into lightweight deployment-ready models for mobile and embedded platforms.
-
----
+Converts trained TensorFlow models into lightweight deployment-ready models suitable for embedded platforms.
 
 ### Float16 Quantization
 
@@ -150,122 +141,41 @@ Converts trained TensorFlow models into lightweight deployment-ready models for 
 - Faster inference
 - Minimal accuracy degradation
 
----
-
 ### INT8 Quantization
 
-- 4× compression
-- Lower memory usage
-- Optimized CPU inference
-- Edge deployment ready
-
----
+- 4× model compression
+- Reduced memory usage
+- Faster CPU inference
+- Optimized for edge deployment
 
 ### Weight Clustering
 
-- Compresses neural network weights
+- Compresses model weights
 - Reduces storage requirements
-- Preserves model performance while increasing compressibility
+- Preserves model performance while improving compressibility
 
 ---
 
 # 📊 Performance Comparison
 
-| Model | Accuracy | Model Size | Inference Time |
-|----------------------|:--------:|:-----------:|:--------------:|
+| Model | Test Accuracy | Model Size | Inference Time |
+|------------------------------|:-------------:|:----------:|:--------------:|
 | MobileNetV2 (Float32) | **96.24%** | **8.97 MB** | **0.0043 s** |
 | VGG16 (Float32) | **98.39%** | **57.72 MB** | **0.1309 s** |
-| MobileNetV2 (INT8) | **80.11%** | **2.58 MB** | **0.0043 s** |
-| VGG16 (INT8) | **98.39%** | **14.29 MB** | **0.1309 s** |
-| MobileNetV2 (Clustered Dense Layer) | **96.24%** | **Compressed Weights** | **Comparable to Float32** |
+| MobileNetV2 (INT8 TFLite) | **80.11%** | **2.58 MB** | **0.0043 s** |
+| VGG16 (INT8 TFLite) | **98.39%** | **14.29 MB** | **0.1309 s** |
+| MobileNetV2 (Weight Clustered) | **96.24%** | **Compressed Weights** | **Comparable to Float32** |
 
 ---
 
-# 📈 Key Findings
+# 🏆 Key Findings
 
-| Observation | Result |
-|-------------|--------|
-| Highest Accuracy | VGG16 (98.39%) |
-| Fastest Inference | MobileNetV2 |
-| Smallest Model | MobileNetV2 INT8 |
-| Best Compression Ratio | VGG16 INT8 (4×) |
-| Best Edge Deployment Choice | MobileNetV2 |
-| Best Overall Accuracy | VGG16 |
-
----
-
-# 📂 Repository Structure
-
-```text
-edge-ai-model-optimization/
-
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── .gitignore
-│
-├── notebooks/
-│   └── EdgeAI_Model_Optimization.ipynb
-│
-├── models/
-│   ├── MobileNetV2/
-│   └── VGG16/
-│
-├── figures/
-│   ├── dataset_samples.png
-│   ├── training_accuracy.png
-│   ├── training_loss.png
-│   ├── confusion_matrix.png
-│   ├── model_size_comparison.png
-│   ├── inference_time.png
-│   └── quantization_results.png
-│
-└── results/
-    ├── benchmark.csv
-    └── performance_summary.csv
-```
-
----
-
-# 📷 Results
-
-## Dataset Samples
-
-<p align="center">
-<img src="figures/dataset_samples.png" width="700">
-</p>
-
----
-
-## Training Accuracy
-
-<p align="center">
-<img src="figures/training_accuracy.png" width="700">
-</p>
-
----
-
-## Training Loss
-
-<p align="center">
-<img src="figures/training_loss.png" width="700">
-</p>
-
----
-
-## Model Size Comparison
-
-<p align="center">
-<img src="figures/model_size_comparison.png" width="700">
-</p>
-
----
-
-## Inference Time Comparison
-
-<p align="center">
-<img src="figures/inference_time.png" width="700">
-</p>
+- **VGG16** achieved the highest classification accuracy (**98.39%**).
+- **MobileNetV2** provided the fastest inference speed and the smallest model size.
+- INT8 quantization reduced model size by approximately **3.5×–4×**.
+- VGG16 retained its original accuracy after INT8 quantization.
+- MobileNetV2 demonstrated superior suitability for real-time Edge AI applications due to its low latency.
+- Weight clustering successfully compressed model weights while maintaining model performance.
 
 ---
 
@@ -283,7 +193,7 @@ Navigate to the project directory
 cd edge-ai-model-optimization
 ```
 
-Install dependencies
+Install the required packages
 
 ```bash
 pip install -r requirements.txt
@@ -305,48 +215,38 @@ jupyter notebook
 - TensorFlow Lite
 - TensorFlow Model Optimization Toolkit
 - NumPy
+- Pandas
 - Matplotlib
 - Scikit-learn
-- Pandas
-
----
-
-# 🚀 Future Work
-
-- Deploy on Raspberry Pi
-- Deploy on NVIDIA Jetson Nano
-- TensorRT Optimization
-- ONNX Conversion
-- OpenVINO Optimization
-- Real-Time Camera Inference
-- Edge TPU Deployment
-- Quantization-Aware Training (QAT)
 
 ---
 
 # 🎯 Skills Demonstrated
 
 - Edge AI
-- Computer Vision
 - Deep Learning
+- Computer Vision
 - Transfer Learning
 - TensorFlow
 - TensorFlow Lite
+- Model Optimization
 - Model Compression
 - Quantization
 - Weight Clustering
 - Performance Benchmarking
-- Embedded AI
 
 ---
 
-# 📚 References
+# 🚀 Future Work
 
-1. TensorFlow Documentation
-2. TensorFlow Lite Documentation
-3. TensorFlow Model Optimization Toolkit
-4. MobileNetV2: Inverted Residuals and Linear Bottlenecks
-5. Very Deep Convolutional Networks for Large-Scale Image Recognition (VGG16)
+- Quantization-Aware Training (QAT)
+- Raspberry Pi Deployment
+- NVIDIA Jetson Deployment
+- TensorRT Optimization
+- ONNX Conversion
+- OpenVINO Optimization
+- Edge TPU Deployment
+- Real-Time Camera Inference
 
 ---
 
@@ -360,8 +260,14 @@ Indian Institute of Science (IISc), Bangalore
 
 ---
 
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
 <div align="center">
 
-⭐ **If you found this project useful, please consider giving it a star!** ⭐
+### ⭐ If you found this project useful, please consider giving it a star!
 
 </div>
